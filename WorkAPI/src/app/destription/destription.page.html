@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="Align">Job Destription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf="spani">
+        <ion-card-title class="Align">
+            <h2><b>{{ spani.company }}</b></h2>
+            <ion-icon name="calendar"></ion-icon> {{ spani.created_at }}
+          </ion-card-title>
+      <img [src]="spani.company_logo" />
+      <ion-card-header>
+        <ion-card-subtitle><h2><b>
+        </b></h2></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-subtitle class="Align">
+        <h4><b>
+            <ion-icon name="journal"></ion-icon> {{ spani.title }}<br>
+            <ion-icon name="pin"></ion-icon> {{ spani.location }}<br>
+            <ion-icon name="journal"></ion-icon> {{ spani.type }}<br>
+            <ion-icon name="home"></ion-icon> {{ spani.company_url }}
+        </b></h4>
+      </ion-card-subtitle><br>
+      <ion-card-content>
+        <h1><b>description</b></h1><br>
+        <h3><b>
+          <div [innerHTML]="spani.description"></div>
+        </b></h3><br>
+        <h1><b>How to Apply</b></h1><br>
+        <h3><b>
+          <div [innerHTML]="spani.how_to_apply"></div>
+        </b></h3>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

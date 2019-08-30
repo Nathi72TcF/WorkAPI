@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="Align">
+      TcF Job Hunters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let spani of JobArray">
+      <ion-card-title class="Align">
+          <h2><b>{{ spani.name.company }}</b></h2>
+        </ion-card-title>
+    <img [src]="spani.name.company_logo" />
+    <ion-card-header>
+      <ion-card-subtitle><h2><b>
+      </b></h2></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="Align">
+      <h3><b>
+        <ion-icon name="journal"></ion-icon> {{ spani.name.title }}<br>
+        <ion-icon name="calendar"></ion-icon> {{ spani.name.created_at }}<br>
+        <ion-icon name="pin"></ion-icon> {{ spani.name.location }}<br>
+        <ion-icon name="journal"></ion-icon> {{ spani.name.type }}
+      </b></h3>
+    </ion-card-content>
+    <div class="Align">
+      <ion-button shape="round" [routerLink]="['/destription', spani.name.id]">view Job Details</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

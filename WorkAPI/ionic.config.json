@@ -1,0 +1,7 @@
+{
+  "name": "WorkAPI",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
